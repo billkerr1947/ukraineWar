@@ -1,0 +1,269 @@
+
+/* whole page section*/
+
+#page 
+  {
+	width:600px;
+	margin:0px auto; /* center page */
+	text-align:left;
+	} 
+
+/* other centering method
+{
+	position:absolute;
+	left:50%;
+	width:600px;
+	margin-top:50px;
+	margin-left:-300px;
+
+	}
+*/
+
+/* bannner section */
+
+/* using h3 to keep it small if style sheet not working */
+#banner h3{
+  margin-left:150px ; /* padding needed for borders?*/
+  /* left margin = sidebar width = 100 + 25 + 25 = 150px */
+  font-family: Courier,'Courier New', CourierPS,  Monaco, monospace;
+ /* trying for monospace 'Wired' effect, not very successful */
+  background-color: #fff; /* white */
+	border: 0;
+	color: #95a580;  /* darker green */
+	padding-left: 0;
+	text-transform: lowercase;
+}
+
+	/* content is wrapper for #fourhundredwide and #sidebar */
+
+#content	{
+  color: #000; /* black text */
+	border: 0;
+	padding: 0; /* padding set in #fourhundredwide */
+	margin: 0px 0px 0px 0px;
+        /* left margin = sidebar width = 100 + 25 + 25 = 150px */
+				/* 150px important value, sets content margin */
+	width: auto; 		/* uses whole page, width controlled by #fourhundredwide */
+				 					/* keeps diverse browsers happy, Zeldman 396 */
+
+}
+
+  /* four hundred wide, main content area */
+
+#fourhundredwide			 {
+/* goes inside #content wrapper */
+/* restrict content to a readable 400px width */
+  float: left;
+	text-align: left;
+	margin-bottom: 50px;
+	padding: 15px 25px; /* 15px top and bottom, 25px left and right */
+	border-top: 10px solid #bdcdbd; /* pale green top border */
+  border-bottom: 10px solid #bdcdbd;  /* pale green bottom border */
+	line-height: 140%; /* easier to read! like it! */
+	background: #ffe;	 /* yellowish fourhundred background */
+	width: 450px; /* value for IE4-5.x/Win */
+	voice-family: "\"}\""; 
+	voice-family:inherit;
+	width: 400px; /* Actual value for conformant browser*/
+	 }
+html>#fourhundredwide	{
+	width: 400px; /* be nice to Opera */
+}
+
+  /* sidebar navigation values */
+
+#sidebar	 {
+		/* absolute positioning to emulate float: left;*/
+		/* more reliable in various browsers - Zeldman 393*/
+		/* over rides content margin of 150px left */
+		/*
+		position: absolute; left: 0; margin: 0;
+		*/		
+		float: left;
+			margin: 0px;
+	  
+  	padding: 15px 25px 25px 25px;	/* top padding same as #fourhundredwide */
+						 					 						/* the words align, not the top of menu area */
+		border: 0;
+		border-top: 10px solid #95a580;  
+		/* darker green aligns with #fourhundredwide border-top */
+		width: 150px;	/*False value for IE4-5.x/Win */
+		voice-family: "\"}\"";
+		voice-family: inherit;
+		width: 100px; /*Actual value for conformant browser*/
+							 }
+html>#sidebar	 {
+		width: 100px; /* Be nice to Opera */
+							 }
+ 
+#sidebar ul	{
+	list-style: none; /* no list markers */
+	padding: 0;
+	margin: 15px 0;	 /* 15px top and bottom */
+	border: 0;
+}
+
+#sidebar li	 {
+		text-align: center;
+		border-bottom: 1px solid #000; /*create box, button effect */
+		/*width: 100px;*/	 
+		margin: 0;
+		padding: 0;
+		font: 12px/35px Myriad, "Lucida Grande", Arial, verdana, lucida, helvetica, sans-serif; 
+		/* 12px/35px is shorthand 12px is font-size, 35px is line-height, it also centres vertically*/
+		color: #000;		/* text colour */						
+}
+
+#sidebartop	{
+	border-top: 1px solid #000;	/* black line on top menu item */
+}
+
+#sidebar li a	{
+	display: block;	  /* makes whole 'button' clickable, nice accessibility feature */	
+	font-weight: normal;
+	padding: 0;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000; /* adds 2 more pixels to box model */
+	background: #e0861e; /* default tan brown background colour of unselected menu items */
+	color: #000;		/* black word links */
+	text-decoration: none;	/* eliminates normal link underline */
+	
+}
+
+#sidebar li a:hover		{
+		font-weight: normal;
+		background: transparent; /* meyer trick */
+		color: #fff;       /* white text when hovering */
+		text-decoration: none;
+}
+
+/* defaults for whole document */
+
+body	{
+  margin:50px 0px; padding:0px;
+	text-align:center;
+	/* IE5/Win bug 	http://bluerobot.com/web/css/center1.html 	*/
+
+/* font-size, font-family covered here for instance */
+	color: #000; /* text colour black */
+	background: #000;  /* black background */
+	background-image: url(earth_400pxheight.jpg);
+	background-position: 10% 50px;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed;  doesn't scroll */
+
+	/*  margin: 0px;  margins, padding set in subsections */
+	padding: 0px;
+	font-family: Georgia, "New Century Schoolbook", Times, serif;
+	font-size: x-small;	/* value for WinIE4/5 */
+	voice-family: "\"}\"";  /* trick Win IE4/5 into thinking rule is finishd */
+	voice-family:inherit;	/* recover from trick */
+	font-size: small;	 /* good value for modern browsers, who have default 16px */
+	} 
+
+html>body	{
+	font-size: small;	/* be nice to Opera */
+	}
+
+	
+/* default headlines */
+
+h1, h2, h3, h4, h5, h6	{
+	font-weight: bold;
+	font-family: Myriad, "Lucida Grande", Arial, verdana, lucida, helvetica, sans-serif;
+	}
+
+h1	{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 32px;
+	line-height: 100%;
+	text-transform: lowercase;
+	color: #000;  /* black */
+	}
+
+h2	{
+	font-size: 14px;
+	margin-top: 25px;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+	line-height: 140%;
+	color: #95a580;  /* darker green */
+	border-top: 2px solid #95a580;
+	border-left: 2px solid #95a580;
+	padding-left: 1em;
+	text-transform: uppercase; /*alternate upper - lower case */
+	}
+
+h3	{
+	font-size: 12px;
+	margin-top: 25px;
+	margin-bottom: 0; 
+	color: #95a580;  /* darker green */
+	border-top: 1px dashed #95a580;
+	border-left: 1px dashed #95a580;
+	padding-left: 1em;
+	text-transform: lowercase;
+    }
+
+h4	{
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+	text-transform: lowercase;
+	background: transparent;
+	color: #95a580; /* darker green */
+	}
+	
+p	{
+	margin-top: 12px;
+	margin-bottom: 12px;
+	line-height: 140%;
+	}
+
+	/* default links 	*/
+
+a:link, a:visited {
+	font-weight : bold; 
+	text-decoration : none; /* no underline */
+	color: #c60;; /* dark brown, same as menu selection */
+	background: transparent; 
+	}
+
+a:hover {
+	font-weight : bold; 
+	text-decoration : underline;
+	color: #95a580;	/* green, same as #fourhundredwide h2, h3 headings */
+	background: transparent; 
+	}
+
+a:active {  /* doesn't do anything */
+	font-weight : bold; 
+	text-decoration : none;
+	color: #000;
+	background: transparent;  
+	}
+
+ul {list-style: circle;}
+
+.centre {text-align:center;} /*used for centering*/
+
+/* class for captions of images */
+.capt {
+  padding: 0px 25px; /* 25px space left and right */
+  text-align: justify;
+	font-style: italic;
+	text-align: center;
+}
+
+.underline{text-decoration: underline;}
+
+.code
+{  font-family: Courier,'Courier New', CourierPS,  Monaco, monospace;
+ /* code font */
+}
+
+.comment {
+color: #669933; /* green */
+}
